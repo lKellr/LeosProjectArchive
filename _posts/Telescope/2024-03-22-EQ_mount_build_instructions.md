@@ -2,7 +2,8 @@
 layout: post
 title: EQ Mount Build Instructions
 date: 2024-03-22
-categories: Telescope
+tags:
+  - guide
 ---
 This is my design for an equatorial mount. It doesn't need many specialized tools, apart from a jigsaw, a drill press or a drill stand and Forstner drill bits. 
 For parts, the most distinct are the bearings. Mine were leftover from my motorcycle and are now getting a second life after over 100k kilometers on the road, but they are cheap to get online. It would also be possible to use other bearing sizes, but in that case other shaft diameters are required and drill bits for the outer diameter might be difficult to find.
