@@ -45,6 +45,6 @@ There is also no azimuthal axis, because i realized that i could turn the extend
 
 [part dimensions](/LeosProjectArchive/assets/EQMountDrawings/eq_mount_plan.pdf)
 
-[declination axis assembly](/assets/EQMountDrawings/eq_mount_assembly_dec.pdf)
+[declination axis assembly](/LeosProjectArchive/assets/EQMountDrawings/eq_mount_assembly_dec.pdf)
 
-[polar axis assembly](/assets/EQMountDrawings/eq_mount_assembly_pol.pdf)
+[polar axis assembly](/LeosProjectArchive/assets/EQMountDrawings/eq_mount_assembly_pol.pdf)
