@@ -39,12 +39,12 @@ There is also no azimuthal axis, because i realized that i could turn the extend
 - two M6 bolts with nuts for the brakes
 - mounting plate for 3/8'' tripod thread 
 # Finished Pictures
-![built01](/PrintedGears/assets/EQMountDrawings/built01.jpg)
-![built02](/PrintedGears/assets/EQMountDrawings/built02.jpg)
+![built01](/LeosProjectArchive/assets/EQMountDrawings/built01.jpg)
+![built02](/LeosProjectArchive/assets/EQMountDrawings/built02.jpg)
 # Drawings with Instructions
 
-[part dimensions](/PrintedGears/assets/EQMountDrawings/eq_mount_plan.pdf)
+[part dimensions](/LeosProjectArchive/assets/EQMountDrawings/eq_mount_plan.pdf)
 
-[declination axis assembly](/PrintedGears/assets/EQMountDrawings/eq_mount_assembly_dec.pdf)
+[declination axis assembly](/LeosProjectArchive/assets/EQMountDrawings/eq_mount_assembly_dec.pdf)
 
-[polar axis assembly](/PrintedGears/assets/EQMountDrawings/eq_mount_assembly_pol.pdf)
+[polar axis assembly](/LeosProjectArchive/assets/EQMountDrawings/eq_mount_assembly_pol.pdf)
