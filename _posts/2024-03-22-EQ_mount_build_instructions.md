@@ -43,7 +43,7 @@ There is also no azimuthal axis, because i realized that i could turn the extend
 ![built02](/assets/EQMountDrawings/built02.jpg)
 # Drawings with Instructions
 
-[part dimensions](/assets/EQMountDrawings/eq_mount_plan.pdf)
+[part dimensions](/LeosProjectArchive/assets/EQMountDrawings/eq_mount_plan.pdf)
 
 [declination axis assembly](/assets/EQMountDrawings/eq_mount_assembly_dec.pdf)
 
