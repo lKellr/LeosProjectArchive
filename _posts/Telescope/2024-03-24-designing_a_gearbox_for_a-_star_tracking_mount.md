@@ -2,7 +2,6 @@
 layout: post
 title: Designing a Gearbox for a Star Tracking Mount
 date: 2024-03-24
-categories: Gearbox
 math: "true"
 tags:
   - thingiverse
