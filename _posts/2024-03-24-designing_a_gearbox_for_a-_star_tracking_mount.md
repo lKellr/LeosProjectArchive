@@ -7,6 +7,7 @@ tags:
   - thingiverse
   - theory
   - design
+categories: Telescope Gearbox 3D_printing
 ---
 To make the telescope mount presented in [this post]({% post_url 2024-03-22-EQ_mount_build_instructions %}) actually useful, it has to be motorized with at least a polar axis. For this i intend to use the open source [OnStep controller](https://onstep.groups.io/).
 On the mechanical side, this requires stepper motors and some kind of transmission to match the low rotation speed of earth. The usual way is to purchase a fitting planetary gearbox.
