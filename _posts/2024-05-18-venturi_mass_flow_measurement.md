@@ -97,6 +97,7 @@ $$c_1² = 2 \frac{\gamma}{\gamma - 1} R T_1 \frac{\tau - 1}{1 - \varphi \tau} = 
 | -------------- | ------------------- |
 | incompressible | $39.5 \frac{m}{s}$  |
 | isentropic     | $34.27 \frac{m}{s}$ |
+
 The corrected mass flow is now $\pu{2.58 g/s}$, even closer to the compressor specification!
 
 Of course, even with the compressible calculation, we did some rather rough approximations, such as a 1D flow without viscous dissipation. To correct for these, a discharge coefficient $C_D = \frac{\dot{m}_\mathrm{real}}{\dot{m}_\mathrm{theo}}$ is often introduced that relates the theoretically predicted mass flow to the real one.
