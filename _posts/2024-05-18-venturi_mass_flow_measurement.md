@@ -20,7 +20,7 @@ In order to measure the flow speed, multiple solutions exist, ranging from the h
 In my case i wanted a simple solution without much electronics that is why i decided to build a Venturi flowmeter.
 ### Venturi Flowmeter Principle
 The Venturi Flowmeter consists of a converging-diverging nozzle which accelerates the flow and a differential pressure measurement that monitors the accompanying pressure drop.
-![](/LeosProjectArchive/assets/Venturi/venturi_section.png)
+![Venturi Section](/LeosProjectArchive/assets/Venturi/venturi_section.png)
 If we use Bernoullis equation for a stationary, incompressible, adiabatic and isentropic flow, the following relation between pressure and velocity can be derived:
 $$ p_t = p + \frac{\rho}{2} c^2 $$
 which is constant along a streamline.
@@ -76,7 +76,7 @@ From the conservation of mass and using the polytropic relation it is simple to 
 $$\left(\frac{Ma_2}{Ma_1}\right)^2 = \frac{1}{\alpha^2 \Pi^{\frac{n+1}{n}}} \eqqcolon \varphi$$
 With the dimensionless ratios $\alpha = \frac{A_2}{A_1}$, $\Pi = \frac{p_2}{p_1}$ and $\tau = \frac{T_2}{T_1} = \Pi^{\frac{n-1}{n}}$.
 In terms of velocities, the relationship is
-$$\frac{c_2}{c_1} = \sqrt{\tau \varphi} = \frac{1}{\alpha \Pi^{q}} \text{.}$$
+$$\frac{c_2}{c_1} = \sqrt{\tau \varphi} = \frac{1}{\alpha \Pi^{\frac{1}{\gamma}}} \text{.}$$
 Here we see that in the compressible case, the pressure difference alone is not anymore sufficient. Instead the thermodynamic calculations require ratios between variables. For us, this is not a problem, because we know the inlet pressure as well as the pressure difference and can deduce the actual pressure values from that.
 
 Now, originally i planned to continue to solve the system in this generalized way. As it turns out, this is not really possible.
