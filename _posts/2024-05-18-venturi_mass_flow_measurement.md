@@ -45,6 +45,7 @@ Behind the throat, the flow is returned to the normal pressure and cross section
 >For my test i inserted this Venturi nozzle into a line, with a compressor running at $\pu{5 bars}$ on one end and a flow constricting nozzle at the other end.
 >I measured a pressure drop of around $\pu{1.1 bar}$, which gives a velocity of $c_1 \approx \pu{40 m/s}$.
 >The hereby calculated mass flow of $\dot{m} \approx \pu{3 g/s}$ is also in the same ballpark range as the specification of my compressor, which is $\pu{23 l/min}$, so $\pu{2.3g/s}$ at $\pu{5 bar}$ and $\pu{290 K}$.
+
 ### Going Incompressible
 We have however assumed an incompressible flow while using air as a medium - which is definitely compressible.
 Whether compressible effects are of relevance can be checked by calculating the Mach number.
