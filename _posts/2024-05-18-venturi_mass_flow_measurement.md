@@ -100,7 +100,7 @@ $$c_1² = 2 \frac{\gamma}{\gamma - 1} R T_1 \frac{\tau - 1}{1 - \varphi \tau} = 
 
 The corrected mass flow is now $\pu{2.58 g/s}$, even closer to the compressor specification!
 
-Of course, even with the compressible calculation, we did some rather rough approximations, such as a 1D flow without viscous dissipation. To correct for these, a discharge coefficient $C_D = \frac{\dot{m}}{\dot{m}_{mathrm{theo}}}$ is often introduced that relates the theoretically predicted mass flow to the real one.
+Of course, even with the compressible calculation, we did some rather rough approximations, such as a 1D flow without viscous dissipation. To correct for these, a discharge coefficient $C_D = \frac{\dot{m}}{\dot{m}_{\mathrm{theo}}}$ is often introduced that relates the theoretically predicted mass flow to the real one.
 Values for it usually lie in the range of $0.98-1$ and can be obtained from the literature or experiments.
 
 In a follow-up blog post, we will run a three dimensional simulation of this nozzle including losses and compare the results to our 1D calculations. So be stoked for that.
