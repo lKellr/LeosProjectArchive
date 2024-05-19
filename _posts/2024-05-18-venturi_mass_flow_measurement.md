@@ -74,7 +74,7 @@ $$\frac{p}{\rho^n} = \textit{const.}$$
 we get an isentropic process if we choose $n = \gamma$ which is 1.4 for air. If we instead select $n=1$ the process is isothermal. The incompressible case is recovered for $n \rightarrow \infty$. For a real process, the polytropic coefficient will lie somewhere in between those extremes.
 
 From the conservation of mass and using the polytropic relation it is simple to derive the relation between the inlet velocity and the velocity at the throat:
-$$\left(\frac{Ma_2}{Ma_1}\right)^2 = \frac{1}{\alpha^2 \Pi^{\frac{n+1}{n}}} \eqqcolon \varphi$$
+$$\left(\frac{Ma_2}{Ma_1}\right)^2 = \frac{1}{\alpha^2 \Pi^{\frac{n+1}{n}}} \mathrel{\mathop:}= \varphi$$
 With the dimensionless ratios $\alpha = \frac{A_2}{A_1}$, $\Pi = \frac{p_2}{p_1}$ and $\tau = \frac{T_2}{T_1} = \Pi^{\frac{n-1}{n}}$.
 In terms of velocities, the relationship is
 $$\frac{c_2}{c_1} = \sqrt{\tau \varphi} = \frac{1}{\alpha \Pi^{\frac{1}{\gamma}}} \text{.}$$
