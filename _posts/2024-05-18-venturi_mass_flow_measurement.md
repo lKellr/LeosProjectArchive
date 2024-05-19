@@ -20,7 +20,7 @@ In order to measure the flow speed, multiple solutions exist, ranging from the h
 In my case i wanted a simple solution without much electronics that is why i decided to build a Venturi flowmeter.
 ### Venturi Flowmeter Principle
 The Venturi Flowmeter consists of a converging-diverging nozzle which accelerates the flow and a differential pressure measurement that monitors the accompanying pressure drop.
-![Venturi Section](/LeosProjectArchive/assets/Venturi/venturi_section.png)
+![Venturi Section](/assets/Venturi/venturi_section.png)
 If we use Bernoullis equation for a stationary, incompressible, adiabatic and isentropic flow, the following relation between pressure and velocity can be derived:
 $$ p_t = p + \frac{\rho}{2} c^2 $$
 which is constant along a streamline.
