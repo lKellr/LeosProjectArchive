@@ -76,7 +76,7 @@ From the conservation of mass and using the polytropic relation it is simple to 
 $$\left(\frac{Ma_2}{Ma_1}\right)^2 = \frac{1}{\alpha^2 \Pi^{\frac{n+1}{n}}} \eqqcolon \varphi$$
 With the dimensionless ratios $\alpha = \frac{A_2}{A_1}$, $\Pi = \frac{p_2}{p_1}$ and $\tau = \frac{T_2}{T_1} = \Pi^{\frac{n-1}{n}}$.
 In terms of velocities, the relationship is
-$$\frac{c_2}{c_1} = \sqrt{\tau \varphi} = \frac{1}{\alpha \Pi^{{\frac{1}{\gamma}}}} \text{.}$$
+$$\frac{c_2}{c_1} = \sqrt{\tau \varphi} = \frac{1}{\alpha \Pi^{q}} \text{.}$$
 Here we see that in the compressible case, the pressure difference alone is not anymore sufficient. Instead the thermodynamic calculations require ratios between variables. For us, this is not a problem, because we know the inlet pressure as well as the pressure difference and can deduce the actual pressure values from that.
 
 Now, originally i planned to continue to solve the system in this generalized way. As it turns out, this is not really possible.
