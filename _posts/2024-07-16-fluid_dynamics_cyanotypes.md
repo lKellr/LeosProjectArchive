@@ -13,18 +13,18 @@ The pictures were not mirrored in gimp (as they do not contain any text), but ex
 In some, you can see the halftoning of the B/W Laserprinter i used.
 
 
-![[/assets/cyanotype/TurbJet.jpg]]
+![turbulent water jet](/assets/cyanotype/TurbJet.jpg)
 _turbulent water jet_
 
-![[/assets/cyanotype/KarmanVortices.jpg]]
+![vortex street](/assets/cyanotype/KarmanVortices.jpg)
 _von Kármán vortex street_
 
-![[/assets/cyanotype/ShockCyl.jpg]]
+![shock](/assets/cyanotype/ShockCyl.jpg)
 _shock in front of a cylinder made visible by interferometry_
 
-![[/assets/cyanotype/Vib.jpg]]
+![vibration](/assets/cyanotype/Vib.jpg)
 _second order flow around an oscillating cylinder_
 
-![[/assets/cyanotype/VortexRing.jpg]]
+![smoke ring](/assets/cyanotype/VortexRing.jpg)
 _cut through a smoke ring_
 
