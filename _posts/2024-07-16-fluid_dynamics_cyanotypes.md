@@ -6,7 +6,7 @@ categories: photography, fluid dynamics
 tags:
   - fluiddynamics
 ---
-In other news, i am sometimes also doing experimental photography. My newest exploits are cyanotypes of some of the beautiful flows collected i van Dykes _An Album of Fluid Motion_.
+In other news, i am sometimes also doing experimental photography. My newest exploits are cyanotypes of some of the beautiful flows collected in van Dykes _An Album of Fluid Motion_.
 
 The pictures were taken from the scanned book. I applied a sigmoid curve to the colors for increased contrast and printed them on transparent film for the cyanotype exposure. 
 The pictures were not mirrored in gimp (as they do not contain any text), but exposed with the transparent image backwards, so that the printer color is directly on the bottom cyanotype side for increased resolution. That's why they turned out mirrored over the originals.
