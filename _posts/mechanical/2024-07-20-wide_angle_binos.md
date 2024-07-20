@@ -2,12 +2,12 @@
 layout: post
 title: Wide-Angle Binoculars for Stargazing
 date: 2024-07-20
-categories: stars
 tags:
   - thingiverse
   - design
+  - stars
 ---
-Someone on the [cloudy nights forum](https://www.cloudynights.com/topic/536652-home-built-nikon-2x54-widefield-binos) found out hat you can use a teleceonverter as a binocular with low magnification but high field of view. Due to a larger aperture, more stars can be seen on the night sky that with the naked eye. The Nikon TC-E2 is especially popular, due to its great quality and great price, since it fits only obsolete cameras that nobody uses any more.
+Someone on the [cloudy nights forum](https://www.cloudynights.com/topic/536652-home-built-nikon-2x54-widefield-binos) found out hat you can use a teleconverter as a binocular with low magnification but high field of view. Due to a larger aperture, more stars can be seen on the night sky that with the naked eye. The Nikon TC-E2 is especially popular, due to its great quality and great price, since it fits only obsolete cameras that nobody uses any more.
 
 Some of the forum users also created 3D prints to hold them.
 Because i don't like the existing designs, i made my own. After some first concepts of a rigid binocular, where the inter-pupillary distance is adjusted by an eccentric ring, i settled on a laser-cut design.

@@ -2,7 +2,6 @@
 layout: post
 title: Venturi Mass Flow Measurement
 date: 2024-05-18
-categories: fluid mechanics
 tags:
   - thingiverse
   - theory

@@ -2,7 +2,6 @@
 layout: post
 date: 2024-03-30
 title: Designing a Gearbox for a Star Tracking Mount II
-categories: Telescope Gearbox 3D_printing
 ---
 # Design
 ## Design Questions
