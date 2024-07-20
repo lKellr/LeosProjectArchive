@@ -16,7 +16,7 @@ The design can be found under [this thingiverse link](https://www.thingiverse.co
 
 I was able to get it laser cut from a small local model shop. Assembly was a bit difficult, especially getting good threads and i failed to make a nice looking glue connection. But it tunred out completely functional and is quite robust.
 
-For the eyepieces i used some Schwalbe No.19 bicycle tubes. They can be folded over to provide a nice eyerest, but are a bit annoying when putting the lens caps on. I also use wings on the side, made from the same tube, but cut so that they are not a ring any more. They are just ixed with rubber band. It would be possible to glue them on, but then i can't remove them when they become annoying and its even more difficult to fit the caps.
+For the eyepieces i used some Schwalbe No.19 bicycle tubes. They can be folded over to provide a nice eye rest, but are a bit annoying when putting the lens caps on. I also use wings on the side, made from the same tube, but cut so that they are not a ring any more. They are just fixed with rubber band. It would be possible to glue them on, but then i can't remove them when they become annoying and its even more difficult to fit the caps.
 
 In the future, I am planning to get some lenses made by an optician that i can fit inside of the eyepieces to correct my eyesight,  because wearing glasses destroys the wide angle purpose of the binos.
 
