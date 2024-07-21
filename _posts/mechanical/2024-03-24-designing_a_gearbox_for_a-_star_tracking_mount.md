@@ -9,7 +9,7 @@ tags:
   - design
 categories: mechanical, astro
 ---
-To make the telescope mount presented in [this post]({% post_url 2024-03-22-EQ_mount_build_instructions %}) actually useful, it has to be motorized with at least a polar axis. For this i intend to use the open source [OnStep controller](https://onstep.groups.io/).
+To make the telescope mount presented in [this post]({% post_url mechanical/2024-03-22-EQ_mount_build_instructions %}) actually useful, it has to be motorized with at least a polar axis. For this i intend to use the open source [OnStep controller](https://onstep.groups.io/).
 On the mechanical side, this requires stepper motors and some kind of transmission to match the low rotation speed of earth. The usual way is to purchase a fitting planetary gearbox.
 Because high precision variants can get somewhat expensive, and i like designing uncommon gearboxes, my plan is to develop my own 3D printed solution.
 # Requirements
