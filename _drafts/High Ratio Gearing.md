@@ -6,10 +6,11 @@ The downside is that this comes at a vanishingly low efficiency, making them uns
 # Epicyclic Gears
 The main commonality of all these gears is that they are all epicyclic. This means that at least one stage of the gear train is not fixed to the housing, but rotates on its own shaft. This shaft is called the carrier, i will give it the index $\phantom{}_\mathrm{S}$ from its German name _Steg_.
 The simplest case derives from two stages of spur gears, with three gears on three shafts. Then the intermediate gear is put on a carrier shaft, and turns into a _planet_. 
-Because the planets rotation speed is completely determined from the shafts it is connected to and can not really be used to extract power from (it is rotating around after all), it can be mostly ignored for the purposes of transmission ratios.
+Because the planet's rotation speed is completely determined from the shafts it is connected to and can not really be used to extract power from (it is rotating around after all), it can be mostly ignored for the purposes of transmission ratios.
 What remains are three shafts with two degrees of freedom. From one transmission ratio characterizing the gearbox, all pairwise transmissions derive.
 Now unless the gear is to operate as a summation gear[^2] , one of the degrees of freedom is eliminated by fixing one of the shafts to the housing, giving it a rotation speed of zero (not the carrier of course, else it is not epicyclic any more).
 The other shafts are then the input and output.
+__TODO__: usually power splitting wiht more than one planet
 # Kinematics
 The kinematic description of all epicyclic gears consisting of a sun gear, carrier with planets and ring gear is summarized in the Willis equation. To derive it, the two basic rotation modes are superimposed:
 - First, the carrier is held fixed and the gear operates like a standard, non-epicyclic transmission. The ratio between the sun and ring gear speeds in this mode is called $i_{12}$.
@@ -30,7 +31,7 @@ With $i_{12} = 1$, the transmission ratio rises to infinity.
 - why can infinity not be reached?
 To get such a ratio, the teeth count of the sun and ring gear have to be almost equal. This is difficult to achieve because of two reasons. Firstly, this would mean that both gears are almost the same size, which does not leave any room for planets. Secondly, it requires a high tooth count, which is difficult to produce.
 For example with SLA 3D printing, one is limited to a module of around 0.5. Combining this with the limited printing volume of 60 mm on my Elegoo Mars, i am limited to at most 120 teeth, and therefore a maximum ratio of 119:1.
-- _TODO: $i_{12} = \frac{z_2}{z_1}$ or inverse?_
+- _TODO: $i_{12} = \frac{z_2}{z_1}$ or inverse? -> no_
 - This gets one to high ratios in the hundreds, but we want to go at least one magnitude higher.
 To offset this, one uses stepped planets.
 - how to offset the space problem? → here is where the many different designs come in!
@@ -44,10 +45,13 @@ $$i_{\mathrm{S}1} = \frac{1}{1 - \frac{z_1- \Delta z}{z_1} \frac{z_+ \Delta z}{z
 - the smaller gears
 - transmission should probably be counterbalanced
 - $i_{12}$ does not depend on planet tooth count, if nonstepped planets used!
+
+- could be built as frictio  wheels: no slip, in practice almost same diameters casue lots of sliding action on tooth flanks: works almost by cam action
 # The Base Layout
 - ring and spur gear versions
 - first the bigger or the smaller gears?
 - TODO: picture of external gear variant
+- TODO: in fact just a stepped planetary (with external gears)
 Kinematically it does not make a difference if the gears are external or external. Making one gear internal is often preferred, because that way the gears can be compactly stacked inside of each other and the number of tooth contacts is much higher, especially since the number of teeth is almost equal. This allows the transmission of higher torques.
 With ring gears, it is often sold as an Acbar gear, for example [here](https://www.akim.ch/AKIM-Produkte.html)
 For 3D printing, i created my own design, which can be downloaded 
@@ -58,12 +62,14 @@ For 3D printing, i created my own design, which can be downloaded
 # Derivatives
 There is really almost no limit on the variations to implement these kinematics.
 - With bevel gears, the transmission becomes a Pericyclic (Nutating) gearbox, as [this](https://www.youtube.com/watch?v=Z-zUTS5FPPc) one that recently appeared on YouTube. It trades radial with axial space.
+- innput via additional plnatary stage sintead of carrier, Bild 4.31, -> equivalent to Wolfrom!, not sure if this gives even higher ratios easily
 - Belt and Pulley variant
 	- Kinematically it is the same as the others above. After all, belt and pulley style transmissions are just separated gears. The internal gear version is of course not possible to implement, as there is no real way to create pulleys with internal contact.
 	- However force transmission works a bit differently (only tangential forces, no normal forces) and this results in a really nice interpretation of its function which i describe [[2024-03-24-designing_a_gearbox_for_a-_star_tracking_mount|here]].
 	- [also my design on thingiverse](https://www.thingiverse.com/thing:6548761), rather simple way to eliminate backlash and produce high quality meshing contacts, could be improved by an adjustable carrier to tension the belts. Rather low transmission ratio of only 169:1, because large pulleys are uncommon and get quite large. Also, this takes up more space than with gear teeth because of the reuqired spearation distance between the two pulleys. Furthermore, the choice of gear ratios is limited by the availability of short belt lengths.
+	- probably low efficiency, belt has high friction on plastic pulleys
 - A cycloidal gearbox uses the eponymous cycloidal curve which meshes with cylinders on the other side. Because these cylinders can be freely rotating, the problematic friction losses are reduced considerable, so that they even become backdriveable. Tooth count and therefore transmission ratio is however limited. A further difference is that the output  is spread over multiple cam and the fact that stepped planets are typically not used. They therefore resemble just the single stage version.
-- Strain-Wave gears have flexible planets that are not really rotating but perform a similar motion forced by the wave generator. One can imagine the wave generator as the planets which are separated from their teeth. The reason is the elimination of backlash. 
+- Strain-Wave gears have flexible planets that are not really rotating but perform a similar motion forced by the wave generator. One can imagine the wave generator as the planets which are separated from their teeth. The reason is the elimination of backlash. But the stiffness is reduced
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 461.9436952142704 310.1603539033839" width="461.9436952142704" height="310.1603539033839">
   <!-- svg-source:excalidraw -->
   

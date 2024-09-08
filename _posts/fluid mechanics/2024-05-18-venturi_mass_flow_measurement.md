@@ -5,7 +5,7 @@ date: 2024-05-18
 tags:
   - thingiverse
   - theory
-  - fluiddynamics
+  - fluids
 math: "true"
 category: fluid mechanics
 ---
