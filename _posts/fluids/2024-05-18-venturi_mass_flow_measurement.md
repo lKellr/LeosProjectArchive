@@ -5,8 +5,10 @@ date: 2024-05-18
 tags:
   - thingiverse
   - theory
+  - design
+  - fluids
 math: "true"
-category: fluid mechanics
+category: fluids
 ---
 After completing a design, it is important to be able to measure whether the expected performance has been met and if not, where improvements have to be made.
 In my case, i had to measure whether a 3D-printed nozzle did perform as desired and actually give the calculated mass flow.

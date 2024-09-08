@@ -4,7 +4,8 @@ title: Fluid Dynamics Cyanotypes
 date: 2024-07-16
 tags:
   - guide
-category: photography
+  - fluids
+categories: photography
 ---
 In other news, i am sometimes also doing experimental photography. My newest exploits are cyanotypes of some of the beautiful flows collected in van Dykes _An Album of Fluid Motion_.
 

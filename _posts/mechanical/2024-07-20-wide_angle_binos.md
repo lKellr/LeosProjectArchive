@@ -5,7 +5,7 @@ date: 2024-07-20
 tags:
   - thingiverse
   - design
-categories: mechanical, astro
+categories: astro
 ---
 Someone on the [cloudy nights forum](https://www.cloudynights.com/topic/536652-home-built-nikon-2x54-widefield-binos) found out hat you can use a teleconverter as a binocular with low magnification but high field of view. Due to a larger aperture, more stars can be seen on the night sky that with the naked eye. The Nikon TC-E2 is especially popular, due to its great quality and great price, since it fits only obsolete cameras that nobody uses any more.
 
