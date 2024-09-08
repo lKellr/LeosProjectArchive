@@ -9,13 +9,13 @@ categories: mechanical, astro
 This is my design for an equatorial mount. It doesn't need many specialized tools, apart from a jigsaw, a drill press or a drill stand and Forstner drill bits. 
 For parts, the most distinct are the bearings. Mine were leftover from my motorcycle and are now getting a second life after over 100k kilometers on the road, but they are cheap to get online. It would also be possible to use other bearing sizes, but in that case other shaft diameters are required and drill bits for the outer diameter might be difficult to find.
 
-The mount started as a barndoor mount, until i realized that it would not be able to carry my scope. I subsequently tried to improve the stiffness and replaced the hinge axes with proper bearings and shafts until a ended up at a German equatorial mount design.
+The mount started as a barn-door mount, until i realized that it would not be able to carry my scope. I subsequently tried to improve the stiffness and replaced the hinge axes with proper bearings and shafts until a ended up at a German equatorial mount design.
 The mount is designed to bolt on to a camera tripod, but is it also possible to use it with a wood clamp and just clamp it to a table
 At the moment, the plan does not include a drive, but i am working on that.
-There is also no azimuthal axis, because i realized that i could turn the extendable poles in their clamps and use that as an axis.
+There is also no azimutal axis, because i realized that i could turn the extendable poles in their clamps and use that as an axis.
 # Required Tools
 - jigsaw
-- drill + drillpress
+- drill + drill press
 - Forstner drill bits
 - Wood Glue
 - Epoxy
