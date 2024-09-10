@@ -20,7 +20,7 @@ MathJax = {
       ['\\[', '\\]']
     ],
     {%- comment -%} equation numbering {%- endcomment -%}
-    tags: 'ams'
+    tags: 'ams',
     macros: {
       gasconstant: "{\\mathcal{R}}",
       avogadro: "{\\mathcal{N}_\\mathrm{A}}",
