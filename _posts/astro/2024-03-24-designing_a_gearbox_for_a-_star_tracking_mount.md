@@ -78,5 +78,6 @@ For even higher ratios the classical variants have of course the advantage that 
 
 The (still untested) .stl files are available [on thingiverse](https://www.thingiverse.com/thing:6548761)
 
+___
 [^1]: With the difference that using an untwisted belt, the rotational direction of the two shafts is not flipped
 [^2]: The worm gear excluded, there are no helical belts as far as i know

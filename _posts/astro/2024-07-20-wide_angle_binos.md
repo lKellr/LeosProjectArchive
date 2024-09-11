@@ -34,5 +34,5 @@ _the hinge_
 _another look of the hinge_
 
 
-
+___
 [^1]: There is probably no person with such a distance, most people are well below 75 mm. But it was difficult to fit the hinge closer to the center line. In addition it also provides more space for the nose

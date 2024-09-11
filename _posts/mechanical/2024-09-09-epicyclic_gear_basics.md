@@ -89,6 +89,7 @@ n_1- i_{12} \, n_2 - (1 - i_{12}) \, n_\mathrm{S} = 0
 
 The ratio $i_{12}$ is the important number that characterizes a planetary gear completely. For setups like in mode 1, with a fixed carrier, it is the overall transmission ratio of the gearbox. However other ratios are achieved by holding different shafts fixed. All of those can be characterized by an expression involving just $i_{12}$, which is found from the Willis equation.
 
+___
 [^1]: Actually from the pitch diameter ratio, but this simplifies to the tooth ratio because both gears must use the same module.
 [^2]: If two shafts are powered, the output speed and torque results from some linear combination of these speeds and torques. This design can be seen in hybrid cars to combine electric and combustion engine output together.
 [^3]: Uneven distribution is a possibility of the desired ratio can otherwise not be attained. This comes however with the downsides of unevenly loaded planets and counterweights to fix the emerging imbalances.
