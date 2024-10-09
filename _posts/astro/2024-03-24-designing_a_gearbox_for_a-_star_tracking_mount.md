@@ -36,12 +36,12 @@ The design i settled on is the following:
 
 ![](/assets/Planetaries/EpicyclicPulley.svg)
 
-The kinematics are equivalent to acbar/strain-wave/cycloidal gears, but with a pulley in the place of the ring gear. More information on the (kinematic) relationship between these transmission types can be found in my post on high ratio gearing.
+The kinematics are equivalent to acbar/strain-wave/cycloidal gears, but with a pulley in the place of the ring gear. More information on the (kinematic) relationship between these transmission types can be found [in my post on high ratio gearing.]({% post_url mechanical/2024-10-09-high_ratio_gearing %})
 
 The achievable ratio is
 
 $$
-i_{\mathrm{S}1} = \left(\frac{z_1}{\Delta z}\right)^2,
+i_{\mathrm{s}1} = \left(\frac{z_1}{\Delta z}\right)^2,
 $$
 
 where $z_1$ now stands for the number of teeth on the $p_1$ and $2$ pulleys. Pulley $p_2$ has $\Delta z$ less teeth, while pulley $1$ has $\Delta z$ additional ones.

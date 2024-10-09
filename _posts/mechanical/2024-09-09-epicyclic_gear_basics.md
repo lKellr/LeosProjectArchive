@@ -19,7 +19,7 @@ $$\begin{equation}
 i_{12} = \frac{n_1}{n_2} = \frac{z_2}{z_1}
 \end{equation}$$
 
-Because for internal gears, $z$ is taken as negative, the ratio can also be negative. In that case, the output shaft rotates into the opposite direction to the input shaft.
+Because for ring gears, $z$ is taken as negative, the ratio can also be negative. In that case, the output shaft rotates into the opposite direction to the input shaft.
 
 To describe the size of the gear teeth, the module is used, defined as
 
@@ -33,12 +33,12 @@ For the complex arrangements of multiple gears into a planetary gearbox, i am go
 All shafts are denoted by lines, with rectangles of the same color for the gear wheels connected to them. Bearings are indicated with circles, but i am omitting some of the supports.
 Hatching denotes parts connected to the housing, i.e., fixed.
 
-For example, the internal gear $2$ in the schematic below is fixed to the housing, the sun $1$ and carrier $\mathrm{S}$ are connected to the housing, but free to rotate via bearings. The planet $\mathrm{p}$ is supported by the carrier and coupled to its rotation.
+For example, the internal gear $2$ in the schematic below is fixed to the housing, the sun $1$ and carrier $\mathrm{s}$ are connected to the housing, but free to rotate via bearings. The planet $\mathrm{p}$ is supported by the carrier and coupled to its rotation.
 # Basic Operation
 
 ![](/assets/Planetaries/OrdinaryPlanetary.svg)
 
-In epicyclic gears,  at least one stage of the gear train is not fixed to the housing, but rotates on its own shaft. This shaft is called the carrier, i will give it the index $\mathrm{S}$ from its German name _Steg_.
+In epicyclic gears,  at least one stage of the gear train is not fixed to the housing, but rotates on its own shaft. This shaft is called the carrier, i will give it the index $\mathrm{s}$ from its German name _Steg_.
 The simplest case derives from two stages of spur gears, with three gears on three shafts. Then the intermediate gear is put on a carrier shaft, and turns into a _planet_. 
 
 Because the planet's rotation speed is completely determined from the shafts it is connected to and can not really be used to extract power from (it is rotating around after all), it can be mostly ignored for the purposes of transmission ratios.
@@ -62,29 +62,29 @@ With stepped planets this becomes even more difficult, as they need to fit into 
 # Kinematics
 The kinematic description of all epicyclic gears consisting of a sun gear, carrier with planets and ring gear is summarized in the Willis equation. To derive it, the two basic rotation modes are superimposed:
 - First, the carrier is held fixed and the gear operates like a standard, non-epicyclic transmission. The ratio between the sun and ring gear speeds in this mode is called $i_{12}$.
-- In the second rotation mode, all gear components rotate in sync with the speed $n_\mathrm{S}$, as if they were a rigid body.
+- In the second rotation mode, all gear components rotate in sync with the speed $n_\mathrm{s}$, as if they were a rigid body.
 Superposition of these speeds results in the shaft speeds in general operation:
 
 $$\begin{equation}
-n_1 =  n_1^\mathrm{mode 1} + n_1^\mathrm{mode 2}  = n_1^\mathrm{mode 1} + n_\mathrm{S}
+n_1 =  n_1^\mathrm{mode 1} + n_1^\mathrm{mode 2}  = n_1^\mathrm{mode 1} + n_\mathrm{s}
 \end{equation}$$
 
 
 $$\begin{equation}
-n_2 = n_2^\mathrm{mode 1} + n_2^\mathrm{mode 2} = n_2^\mathrm{mode 1} + n_\mathrm{S}
+n_2 = n_2^\mathrm{mode 1} + n_2^\mathrm{mode 2} = n_2^\mathrm{mode 1} + n_\mathrm{s}
 \end{equation}$$
 
 and the Willis equation is
 
 $$
-i_{12} = \frac{n_1^\mathrm{mode 1}}{n_2^\mathrm{mode 1}} =  \frac{n_1 - n_\mathrm{S}}{n_2 - n_\mathrm{S}}
+i_{12} = \frac{n_1^\mathrm{mode 1}}{n_2^\mathrm{mode 1}} =  \frac{n_1 - n_\mathrm{s}}{n_2 - n_\mathrm{s}}
 $$
 
 or more commonly
 
 $$
 \begin{equation}
-n_1- i_{12} \, n_2 - (1 - i_{12}) \, n_\mathrm{S} = 0
+n_1- i_{12} \, n_2 - (1 - i_{12}) \, n_\mathrm{s} = 0
 \end{equation}$$
 
 The ratio $i_{12}$ is the important number that characterizes a planetary gear completely. For setups like in mode 1, with a fixed carrier, it is the overall transmission ratio of the gearbox. However other ratios are achieved by holding different shafts fixed. All of those can be characterized by an expression involving just $i_{12}$, which is found from the Willis equation.
