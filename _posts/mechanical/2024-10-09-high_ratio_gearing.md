@@ -41,7 +41,7 @@ To offset this problem, one uses stepped planets.
 These are two spur gears fixed face-to-face along their common axis. One profile meshes with the sun gear, while the other one meshes with the ring gear. The ratio $i_{12}$ is then not anymore independent on the planets, but depends on their gear ratio as well[^3].
 
 With $$i_{12} = i_{1 \mathrm{p}_1} i_{\mathrm{p}_2 2}$$, a differential effect can be exploited. Each ratio on its own can not be too close to one (because of the tooth count limitations), but with one ratio slightly greater and one slightly smaller than one, the overall ratio approaches one much closer.
-We again select $z_1$ as the "base" tooth count. Then the best transmission ratio for the first tooth contact results from $z_{\mathrm{p}_1} = z_1 - \Delta z$ [^4], with $\Delta z$ equal to $1$ or $2$. The other planet profile uses $z_{\mathrm{p}_2} = z_1$ teeth, which means that $z_2 = z_1 + \Delta z$.
+We again select $z_1$ as the "base" tooth count. Then the best transmission ratio for the first tooth contact results from $$z_{\mathrm{p}_1} = z_1 - \Delta z$$ [^4], with $\Delta z$ equal to $1$ or $2$. The other planet profile uses $$z_{\mathrm{p}_2} = z_1$$ teeth, which means that $$z_2 = z_1 + \Delta z$$.
 Inserting all that into the Willis equation results in
 
 $$
