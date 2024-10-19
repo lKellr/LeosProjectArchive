@@ -30,42 +30,42 @@ Luckily, the receiver puts out each pulse on a different pin, so it is not our w
 To determine these pulse widths, I am detecting the start of the pulse and then starting a timer until the next falling edge on this pin. This has to be done for each of the two input channels – pitch and yaw.
 
 In order to identify a pulse, I am using interrupts, which are activated with the following code:
-```C
-  uint8_t oldSREG = SREG;
-  cli();
-  GIMSK |= (1 << PCIE);
-  PCMSK |= (1 << PIN_RECVR_YAW) | (1 << PIN_RECVR_PITCH);
-  SREG = oldSREG;
+```c
+uint8_t oldSREG = SREG;
+cli();
+GIMSK |= (1 << PCIE);
+PCMSK |= (1 << PIN_RECVR_YAW) | (1 << PIN_RECVR_PITCH);
+SREG = oldSREG;
 ```
 In the first line, the old state of the interrupt register is saved, then they are disabled by the `cli()` call. The next two lines activate the pin change interrupt and specify the triggering pins.
 Then the interrupts are reactivated with the old state.
 
 The interrupt calls the function[^2]
-```C
+```c
 ISR(PCINT0_vect)
 ```
 Inside of it, we first have to determine which pin has changed, and if it was rising or falling. For that we need the (digital) pin values. Instead of `digitalInput(PIN_RECVR)`, I read them directly from the register for speed. The ATtiny85 has only the _PINB_ registers and the pin numbers are equal to the register locations.[^4]
-```C
-  curr_pinval_yaw = (PINB & (1 << PIN_RECVR_YAW)) >> PIN_RECVR_YAW;
-  curr_pinval_pitch = (PINB & (1 << PIN_RECVR_PITCH)) >> PIN_RECVR_PITCH;
+```c
+curr_pinval_yaw = (PINB & (1 << PIN_RECVR_YAW)) >> PIN_RECVR_YAW;
+curr_pinval_pitch = (PINB & (1 << PIN_RECVR_PITCH)) >> PIN_RECVR_PITCH;
 ```
 With that, I first have to determine, which of the two channels has received the pulse. Here I check just the yaw channel, but it is exactly the same procedure for the pitch channel.
 Then I determine if it is the start or the end of the pulse. At the pulse start, the current time is recorded in `rcv_yaw_start_pulse`.
 When the pulse ends, the pulse time is the time when the pulse has ended minus the stored time at the start of the pulse. Because these values were a bit shorter than expected (and measured with an oscilloscope) I apply a correction of $\pu{50µs}$ via `PULSE_T_CORRECTION`.
 Finally, I set the boolean `new_target`, that i then use to determine that the servos have received a new target. Due to the mixing, this target changes for both servos, even if only one channel received new commands.
-```C
-  if (last_pinval_yaw ^ curr_pinval_yaw)  // yaw pin changed
-  {
-    if (last_pinval_yaw == LOW)  // we have a rising edge
-    {
-      rcv_yaw_start_pulse = micros();  // start timer
-    } else                             // we have a falling edge
-    {
-      int commanded_yaw = micros() + PULSE_T_CORRECTION - rcv_yaw_start_pulse;
-      new_target = true;
-      }
-    }
-    last_pinval_yaw = curr_pinval_yaw;
+```c
+if (last_pinval_yaw ^ curr_pinval_yaw)  // yaw pin changed
+{
+	if (last_pinval_yaw == LOW)  // we have a rising edge
+	{
+	  rcv_yaw_start_pulse = micros();  // start timer
+	} else                             // we have a falling edge
+	{
+	  int commanded_yaw = micros() + PULSE_T_CORRECTION - rcv_yaw_start_pulse;
+	  new_target = true;
+	}
+}
+last_pinval_yaw = curr_pinval_yaw;
 ```
 # V-Tail Mixing Logic
 The equation, by which the servo angles for the v-tail are determined from pitch and yaw inputs are quite simple. For pitch, it is trivial: the commanded pitch value should be directly relayed to both rudders. For a yaw input on the other hand, the rudders have to move in opposing directions. If the yawing is to the left, the left rudder must move down and the right rudder up.
@@ -89,7 +89,7 @@ The second option is to clip values outside the valid range to the maximum or mi
 As a compromise between these two options, I added in a _saturation factor_, that – together with clipping – allows setting the mixing behavior between those two extremes. A factor of $0.5$ corresponds to halving the inputs, without any saturation. Any factor higher than that causes at least some saturation for the higher inputs, until at $1.0$, one rudder can be fully saturated. Higher values of the factor increase the onset of saturation behavior and reduce the input sensitivity of the saturating rudder at full deflection. For my glider, I decided on a high saturation value of $0.9$.
 
 With saturation and proper rescaling, the equation for the rudder values are:
-```C
+```c
 mixed_L = constrain((pitch - yaw) * SUM_SATURATION_FACTOR + PWM_CENTER, PWM_MIN, PWM_MAX);
 
 mixed_R = constrain((pitch + yaw - 2 * PWM_CENTER) * SUM_SATURATION_FACTOR + PWM_CENTER, PWM_MIN, PWM_MAX);
@@ -107,7 +107,7 @@ While this worked fine on the Arduino Leonardo used for testing, on the ATtiny85
 So I want back to a filter order of two, with a slightly lowered cutoff frequency of $0.1$.
 To eliminate all the remaining jitter I also added a threshold value, set to $25$. New commands are ignored if they do not change the output signal by at least this magnitude. While this completely eliminates all jitter, it also means that the input is much coarser. It might for example be difficult to return to a true neutral $0$ value for the servos if the thresholding “locks” around a different center value.
 # The Complete Code
-```C
+```c
 #include <Servo_ATtinyCore.h>
 #include <Filters.h>
 #include <Filters/Butterworth.hpp>
@@ -152,8 +152,8 @@ void setup() {
 
 void loop() {
   if (new_target) {
-    update_servos(target_pitch, target_yaw);
-    new_target = false;
+	update_servos(target_pitch, target_yaw);
+	new_target = false;
   }
 }
 
@@ -164,36 +164,36 @@ ISR(PCINT0_vect)
 
   if (last_pinval_yaw ^ curr_pinval_yaw)  // yaw pin changed
   {
-    if (last_pinval_yaw == LOW)  // we have a rising edge
-    {
-      rcv_yaw_start_pulse = micros();  // start timer
-    } else                             // we have a falling edge
-    {
-      // de-jittering:
-      int commanded_yaw = filter_yaw(micros() + PULSE_T_CORRECTION - rcv_yaw_start_pulse);
-      if (abs(commanded_yaw - target_yaw) > THR_JITTER) {
-        target_yaw = commanded_yaw;
-        new_target = true;
-      }
-    }
-    last_pinval_yaw = curr_pinval_yaw;
+	if (last_pinval_yaw == LOW)  // we have a rising edge
+	{
+	  rcv_yaw_start_pulse = micros();  // start timer
+	} else                             // we have a falling edge
+	{
+	  // de-jittering:
+	  int commanded_yaw = filter_yaw(micros() + PULSE_T_CORRECTION - rcv_yaw_start_pulse);
+	  if (abs(commanded_yaw - target_yaw) > THR_JITTER) {
+		target_yaw = commanded_yaw;
+		new_target = true;
+	  }
+	}
+	last_pinval_yaw = curr_pinval_yaw;
   }
 
   if (last_pinval_pitch ^ curr_pinval_pitch)  // pitch pin changed
   {
-    if (last_pinval_pitch == LOW)  // we have a rising edge
-    {
-      rcv_pitch_start_pulse = micros();
-    } else  // we have a falling edge
-    {
-      // de-jittering:
-      int commanded_pitch = filter_pitch(micros() + PULSE_T_CORRECTION - rcv_pitch_start_pulse);
-      if (abs(commanded_pitch - target_pitch) > THR_JITTER) {
-        target_pitch = commanded_pitch;
-        new_target = true;
-      }
-    }
-    last_pinval_pitch = curr_pinval_pitch;
+	if (last_pinval_pitch == LOW)  // we have a rising edge
+	{
+	  rcv_pitch_start_pulse = micros();
+	} else  // we have a falling edge
+	{
+	  // de-jittering:
+	  int commanded_pitch = filter_pitch(micros() + PULSE_T_CORRECTION - rcv_pitch_start_pulse);
+	  if (abs(commanded_pitch - target_pitch) > THR_JITTER) {
+		target_pitch = commanded_pitch;
+		new_target = true;
+	  }
+	}
+	last_pinval_pitch = curr_pinval_pitch;
   }
 }
 
