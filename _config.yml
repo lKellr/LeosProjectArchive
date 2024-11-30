@@ -49,11 +49,26 @@ google_site_verification: # fill in to your verification string
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings
 
-google_analytics:
-  id: # fill in your Google Analytics ID
+# Web Analytics Settings
+analytics:
+  google:
+    id: # fill in your Google Analytics ID
+  goatcounter:
+    id: lkellr # fill in your GoatCounter ID
+  umami:
+    id: # fill in your Umami ID
+    domain: # fill in your Umami domain
+  matomo:
+    id: # fill in your Matomo ID
+    domain: # fill in your Matomo domain
+  cloudflare:
+    id: # fill in your Cloudflare Web Analytics token
+  fathom:
+    id: # fill in your Fathom Site ID
 
-goatcounter:
-  id: lkellr # fill in your Goatcounter ID
+# Page views settings
+pageviews:
+  provider: # goatcounter # now only supports 'goatcounter'
 
 # Prefer color scheme setting.
 #
@@ -68,12 +83,12 @@ goatcounter:
 #
 theme_mode: # [light | dark]
 
-# The CDN endpoint for images.
+# The CDN endpoint for media resources.
 # Notice that once it is assigned, the CDN url
-# will be added to all image (site avatar & posts' images) paths starting with '/'
+# will be added to all media resources (site avatar, posts' images, audio and video files) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn:
+cdn:
 
 # the avatar on sidebar, support local or CORS resources
 avatar: assets/Icons/lorenz_small_red.svg
@@ -86,8 +101,9 @@ social_preview_image: # string, local or CORS resources
 toc: true
 
 comments:
-  active: giscus # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
-  # The active options are as follows:
+  # Global switch for the post-comment system. Keeping it empty means disabled.
+  provider: giscus # [disqus | utterances | giscus]
+  # The provider options are as follows:
   disqus:
     shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
   # utterances settings › https://utteranc.es/
@@ -101,7 +117,7 @@ comments:
     category: Comments
     category_id: DIC_kwDOLpto984CeeZL
     mapping: pathname # optional, default to 'pathname'
-    input_position: bottom # optional, default to 'bottom'
+    input_position: top # optional, default to 'bottom'
     lang: en # optional, default to the value of `site.lang`
     reactions_enabled: 1 # optional, default to the value of `1`
     loading: lazy
@@ -132,6 +148,7 @@ baseurl: "/LeosProjectArchive"
 # ------------ The following options are not recommended to be modified ------------------
 
 kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
   syntax_highlighter: rouge
   syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
     css_class: highlight
@@ -168,10 +185,10 @@ defaults:
     values:
       layout: page
       permalink: /:title/
-  - scope:
-      path: assets/js/dist
-    values:
-      swcache: true
+#  - scope:
+#      path: assets/js/dist
+#    values:
+#      swcache: true
 
 sass:
   style: compressed
@@ -192,7 +209,8 @@ exclude:
   - tools
   - README.md
   - LICENSE
-  - rollup.config.js
+  # - rollup.config.js
+  - "*.config.js"
   - package*.json
 
 jekyll-archives:
